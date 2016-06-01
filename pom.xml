@@ -3,11 +3,54 @@
   <groupId>have-fun</groupId>
   <artifactId>have-fun</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>have-fun-core</module>
-  	<module>have-fun-persistence</module>
-  	<module>have-fun-service</module>
-  	<module>have-fun-web</module>
-  </modules>
+  <packaging>war</packaging>
+  
+  <properties>
+  	<spring-webmvc.version>4.2.6.RELEASE</spring-webmvc.version>
+  	<jstl.version>1.2</jstl.version>
+	<javax.servlet-api.version>3.0.1</javax.servlet-api.version>
+  </properties>
+  
+  <dependencies>
+  	<!-- Spring dependencies -->
+   	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${spring-webmvc.version}</version>
+	</dependency>
+	
+	<!-- JSP dependencies -->
+	<dependency>
+		<groupId>jstl</groupId>
+		<artifactId>jstl</artifactId>
+		<version>${jstl.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>${javax.servlet-api.version}</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
