@@ -13,9 +13,6 @@ http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 	<mvc:annotation-driven />
 
 	<context:component-scan base-package="fr.havefun.controller" />
-	<context:component-scan base-package="fr.havefun.service" />
-	<context:component-scan base-package="fr.havefun.dao" />
-	<context:component-scan base-package="fr.havefun.model" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
