@@ -1,0 +1,42 @@
+body {
+	margin : 0;
+}
+
+#mainContainer {
+	width : 100%;
+	margin-left: 0%;
+	background-color: white;
+	color: black;
+	height : 100%;
+}
+
+#header {
+	background-color : black;
+	color : white;
+}
+
+#header img{
+	display : inline-block;
+	vertical-align : middle;
+}
+
+#header h1{
+	display : inline-block;
+	vertical-align : middle;
+}
+
+#nav {
+	width : 100%;
+	background-color : white;
+	color : black;
+	cursor : pointer;
+	padding: 10px 0;
+	border-top : 3px solid purple;
+	border-bottom : 2px solid purple;
+}
+
+#nav .nav-item{
+	display: inline-block; 
+	width : 24%;
+	text-align : center;
+}
