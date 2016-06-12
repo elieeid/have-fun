@@ -13,9 +13,29 @@
 	<hibernate-validator.version>5.1.0.Final</hibernate-validator.version>
    	<hibernate-entitymanager.version>4.3.4.Final</hibernate-entitymanager.version>
    	<hibernate-core.version>4.3.4.Final</hibernate-core.version>
+   	<bonecp.version>0.8.0.RELEASE</bonecp.version>
+   	<mysql-connector-java.version>5.1.29</mysql-connector-java.version>
   </properties>
   
   <dependencies>
+  <!-- Connector mysql dependencies -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>${mysql-connector-java.version}</version>
+	</dependency>
+  	<!-- Datasource dependencies -->
+	<dependency>
+		<groupId>com.jolbox</groupId>
+		<artifactId>bonecp</artifactId>
+		<exclusions>
+			<exclusion>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+			</exclusion>
+		</exclusions>
+		<version>${bonecp.version}</version>
+	</dependency>
   	<!-- Hibernate dependencies -->
 	<dependency>
 		<groupId>org.hibernate</groupId>
